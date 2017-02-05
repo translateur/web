@@ -1,0 +1,189 @@
+@import 'variables';
+
+*,
+*:after,
+*:before {
+	border-radius: 0;
+	box-sizing: border-box;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	background: $background;
+	color: $color;
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	font: normal 0.875em/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	justify-content: center;
+	margin: auto;
+	min-height: 100vh;
+	overflow-y: scroll;
+	text-align: center;
+}
+
+a {
+	color: $accent;
+	text-decoration: none;
+	transition: 300ms;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+img {
+	border: none;
+	max-width: 100%;
+	vertical-align: top;
+}
+
+p {
+	line-height: 1.6;
+	margin: 1em auto;
+	max-width: 30em;
+}
+
+// layout
+
+header {
+	background: $accent;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: 6vh 2em;
+
+	img {
+		height: 8vh;
+	}
+
+	h1 {
+		color: $background;
+		margin: 1em 0 1rem;
+		position: relative;
+	}
+
+	h2 {
+		color: $background;
+	}
+}
+
+footer,
+section {
+	align-self: center;
+	margin-top: 4em;
+	max-width: 60em;
+
+	h3 {
+		color: $colorLight;
+	}
+
+	aside {
+		display: flex;
+		margin-top: 1em;
+	}
+}
+
+section {
+	aside {
+		a {
+			align-items: center;
+			background: $accent;
+			color: $background;
+			border-radius: 0.25em;
+			display: flex;
+			padding: 0.5em 1em;
+
+			&:active,
+			&:hover {
+				background: $accent;
+			}
+
+			&:before {
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				content: '';
+				height: 2em;
+				margin-right: 1em;
+				width: 2em;
+			}
+
+			&.app-store {
+				background: lighten($accent, 5%);
+				cursor: default;
+
+				&:before {
+					background-image: url('/assets/img/store/app-store.png');
+				}
+			}
+
+			&.google-play {
+				&:before {
+					background-image: url('/assets/img/store/google-play.png');
+				}
+			}
+		}
+	}
+
+	figure {
+		border-radius: 0.5em;
+		overflow: hidden;
+	}
+}
+
+footer {
+	margin: 4em 2em;
+
+	aside {
+		a {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 1.5em auto;
+			filter: grayscale(100%);
+			height: 2em;
+			width: 2em;
+
+			&:active,
+			&:hover {
+				filter: grayscale(0);
+			}
+
+			&:not(:first-child) {
+				margin-left: 1em;
+			}
+
+			&.dribbble {
+				background-image: url('/assets/img/social/dribbble.svg');
+			}
+
+			&.github {
+				background-image: url('/assets/img/social/github.svg');
+			}
+
+			&.twitter {
+				background-image: url('/assets/img/social/twitter.svg');
+			}
+		}
+	}
+}
+@import 'responsive';

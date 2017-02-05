@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+	section {
+		aside {
+			align-items: stretch;
+			flex-direction: column;
+
+			a {
+				&:not(:first-child) {
+					margin-top: 1em;
+				}
+			}
+		}
+
+		figure {
+			&:not(:first-child) {
+				margin-top: 2em;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	section {
+		&.screens {
+			display: flex;
+			flex-direction: row;
+		}
+
+		aside {
+			align-items: center;
+
+			a {
+				&:not(:first-child) {
+					margin-left: 1em;
+				}
+			}
+		}
+
+		figure {
+			&:not(:first-child) {
+				margin-left: 2em;
+			}
+		}
+	}
+}
