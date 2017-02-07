@@ -115,7 +115,7 @@ section {
 
 			&:active,
 			&:hover {
-				background: $accent;
+				background: $primary;
 			}
 
 			&:before {
@@ -129,9 +129,6 @@ section {
 			}
 
 			&.app-store {
-				background: lighten($accent, 5%);
-				cursor: default;
-
 				&:before {
 					background-image: url('/assets/img/store/app-store.png');
 				}
